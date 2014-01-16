@@ -6,6 +6,7 @@ A simple JSON parser that allows looser JSON syntax.
 - You can put C-style line comments //anywhere...
 - You dont need to quote object keys unless they "contain spaces"
 - You don't need commas to separate key:value pairs
+- But, if you use commas, they're allowed after the last key:value pair in an object and after the last value in an array
 
 Non-standard but I love it for my own projects..
 
