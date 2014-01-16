@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D9937DCF188896F2009574AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCE188896F2009574AD /* Foundation.framework */; };
-		D9937DDD188896F3009574AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DDC188896F3009574AD /* XCTest.framework */; };
-		D9937DDE188896F3009574AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCE188896F2009574AD /* Foundation.framework */; };
-		D9937DE0188896F3009574AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DDF188896F3009574AD /* UIKit.framework */; };
-		D9937DE3188896F3009574AD /* libmJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCB188896F2009574AD /* libmJSON.a */; };
-		D9937DE9188896F3009574AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9937DE7188896F3009574AD /* InfoPlist.strings */; };
-		D9937DEB188896F3009574AD /* JSONLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937DEA188896F3009574AD /* JSONLiteTests.m */; };
 		D9937E0418889795009574AD /* jsonlite.l in Sources */ = {isa = PBXBuildFile; fileRef = D9937DFF18889795009574AD /* jsonlite.l */; };
 		D9937E0518889795009574AD /* jsonlite.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0018889795009574AD /* jsonlite.m */; };
 		D9937E0618889795009574AD /* jsonlite.y in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0118889795009574AD /* jsonlite.y */; };
@@ -45,16 +39,6 @@
 		};
 /* End PBXBuildRule section */
 
-/* Begin PBXContainerItemProxy section */
-		D9937DE1188896F3009574AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D9937DC3188896F2009574AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D9937DCA188896F2009574AD;
-			remoteInfo = mJSON;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		D9937DC9188896F2009574AD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -70,12 +54,8 @@
 /* Begin PBXFileReference section */
 		D9937DCB188896F2009574AD /* libmJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9937DCE188896F2009574AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D9937DDB188896F3009574AD /* mJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9937DDC188896F3009574AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D9937DDF188896F3009574AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D9937DE6188896F3009574AD /* JSONLiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSONLiteTests-Info.plist"; sourceTree = "<group>"; };
-		D9937DE8188896F3009574AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D9937DEA188896F3009574AD /* JSONLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONLiteTests.m; sourceTree = "<group>"; };
 		D9937DFF18889795009574AD /* jsonlite.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = jsonlite.l; sourceTree = SOURCE_ROOT; };
 		D9937E0018889795009574AD /* jsonlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsonlite.m; sourceTree = SOURCE_ROOT; };
 		D9937E0118889795009574AD /* jsonlite.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = jsonlite.y; sourceTree = SOURCE_ROOT; };
@@ -92,17 +72,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9937DD8188896F3009574AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9937DDD188896F3009574AD /* XCTest.framework in Frameworks */,
-				D9937DE0188896F3009574AD /* UIKit.framework in Frameworks */,
-				D9937DDE188896F3009574AD /* Foundation.framework in Frameworks */,
-				D9937DE3188896F3009574AD /* libmJSON.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				D9937DD0188896F2009574AD /* JSONLite */,
-				D9937DE4188896F3009574AD /* JSONLiteTests */,
 				D9937DCD188896F2009574AD /* Frameworks */,
 				D9937DCC188896F2009574AD /* Products */,
 			);
@@ -120,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				D9937DCB188896F2009574AD /* libmJSON.a */,
-				D9937DDB188896F3009574AD /* mJSONTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,25 +115,6 @@
 			path = mJSON;
 			sourceTree = "<group>";
 		};
-		D9937DE4188896F3009574AD /* JSONLiteTests */ = {
-			isa = PBXGroup;
-			children = (
-				D9937DEA188896F3009574AD /* JSONLiteTests.m */,
-				D9937DE5188896F3009574AD /* Supporting Files */,
-			);
-			name = JSONLiteTests;
-			path = mJSONTests;
-			sourceTree = "<group>";
-		};
-		D9937DE5188896F3009574AD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9937DE6188896F3009574AD /* JSONLiteTests-Info.plist */,
-				D9937DE7188896F3009574AD /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,24 +136,6 @@
 			productName = mJSON;
 			productReference = D9937DCB188896F2009574AD /* libmJSON.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		D9937DDA188896F3009574AD /* mJSONTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D9937DF1188896F3009574AD /* Build configuration list for PBXNativeTarget "mJSONTests" */;
-			buildPhases = (
-				D9937DD7188896F3009574AD /* Sources */,
-				D9937DD8188896F3009574AD /* Frameworks */,
-				D9937DD9188896F3009574AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9937DE2188896F3009574AD /* PBXTargetDependency */,
-			);
-			name = mJSONTests;
-			productName = mJSONTests;
-			productReference = D9937DDB188896F3009574AD /* mJSONTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -229,21 +159,9 @@
 			projectRoot = "";
 			targets = (
 				D9937DCA188896F2009574AD /* mJSON */,
-				D9937DDA188896F3009574AD /* mJSONTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D9937DD9188896F3009574AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9937DE9188896F3009574AD /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9937DC7188896F2009574AD /* Sources */ = {
@@ -257,34 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9937DD7188896F3009574AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9937DEB188896F3009574AD /* JSONLiteTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D9937DE2188896F3009574AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D9937DCA188896F2009574AD /* mJSON */;
-			targetProxy = D9937DE1188896F3009574AD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D9937DE7188896F3009574AD /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9937DE8188896F3009574AD /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D9937DEC188896F3009574AD /* Debug */ = {
@@ -385,42 +276,6 @@
 			};
 			name = Release;
 		};
-		D9937DF2188896F3009574AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "JSONLiteTests/JSONLiteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D9937DF3188896F3009574AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "JSONLiteTests/JSONLiteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,15 +293,6 @@
 			buildConfigurations = (
 				D9937DEF188896F3009574AD /* Debug */,
 				D9937DF0188896F3009574AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D9937DF1188896F3009574AD /* Build configuration list for PBXNativeTarget "mJSONTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9937DF2188896F3009574AD /* Debug */,
-				D9937DF3188896F3009574AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
