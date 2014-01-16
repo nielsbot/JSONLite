@@ -29,3 +29,10 @@ Standard JSON:
         ]
         objectProp: { key0:"string0" }
     }
+
+Getting it working
+------------------
+
+You will need to install updated versions of `bison` and `flex`. The project expects them to be in `/usr/local/opt/bison` and `/usr/local/opt/flex` respectively. You can use [homebrew][1] to install them in the right place: `brew install bison` and `brew install flex`. After that JSONLite should compile.
+
+[1]: http://brew.sh
