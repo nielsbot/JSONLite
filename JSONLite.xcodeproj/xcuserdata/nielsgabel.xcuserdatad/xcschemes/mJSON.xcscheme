@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D9937DCA188896F2009574AD"
                BuildableName = "libmJSON.a"
                BlueprintName = "mJSON"
-               ReferencedContainer = "container:mJSON.xcodeproj">
+               ReferencedContainer = "container:JSONLite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "D9937DDA188896F3009574AD"
                BuildableName = "mJSONTests.xctest"
                BlueprintName = "mJSONTests"
-               ReferencedContainer = "container:mJSON.xcodeproj">
+               ReferencedContainer = "container:JSONLite.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

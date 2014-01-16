@@ -13,11 +13,11 @@
 		D9937DE0188896F3009574AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DDF188896F3009574AD /* UIKit.framework */; };
 		D9937DE3188896F3009574AD /* libmJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCB188896F2009574AD /* libmJSON.a */; };
 		D9937DE9188896F3009574AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9937DE7188896F3009574AD /* InfoPlist.strings */; };
-		D9937DEB188896F3009574AD /* mJSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937DEA188896F3009574AD /* mJSONTests.m */; };
-		D9937E0418889795009574AD /* mjson.l in Sources */ = {isa = PBXBuildFile; fileRef = D9937DFF18889795009574AD /* mjson.l */; };
-		D9937E0518889795009574AD /* mjson.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0018889795009574AD /* mjson.m */; };
-		D9937E0618889795009574AD /* mjson.y in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0118889795009574AD /* mjson.y */; };
-		D9937E0718889795009574AD /* mJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0318889795009574AD /* mJSONParser.m */; };
+		D9937DEB188896F3009574AD /* JSONLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937DEA188896F3009574AD /* JSONLiteTests.m */; };
+		D9937E0418889795009574AD /* jsonlite.l in Sources */ = {isa = PBXBuildFile; fileRef = D9937DFF18889795009574AD /* jsonlite.l */; };
+		D9937E0518889795009574AD /* jsonlite.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0018889795009574AD /* jsonlite.m */; };
+		D9937E0618889795009574AD /* jsonlite.y in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0118889795009574AD /* jsonlite.y */; };
+		D9937E0718889795009574AD /* JSONLiteParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0318889795009574AD /* JSONLiteParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -73,14 +73,14 @@
 		D9937DDB188896F3009574AD /* mJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9937DDC188896F3009574AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D9937DDF188896F3009574AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D9937DE6188896F3009574AD /* mJSONTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mJSONTests-Info.plist"; sourceTree = "<group>"; };
+		D9937DE6188896F3009574AD /* JSONLiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSONLiteTests-Info.plist"; sourceTree = "<group>"; };
 		D9937DE8188896F3009574AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D9937DEA188896F3009574AD /* mJSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mJSONTests.m; sourceTree = "<group>"; };
-		D9937DFF18889795009574AD /* mjson.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = mjson.l; sourceTree = SOURCE_ROOT; };
-		D9937E0018889795009574AD /* mjson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mjson.m; sourceTree = SOURCE_ROOT; };
-		D9937E0118889795009574AD /* mjson.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = mjson.y; sourceTree = SOURCE_ROOT; };
-		D9937E0218889795009574AD /* mJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mJSONParser.h; sourceTree = SOURCE_ROOT; };
-		D9937E0318889795009574AD /* mJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mJSONParser.m; sourceTree = SOURCE_ROOT; };
+		D9937DEA188896F3009574AD /* JSONLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONLiteTests.m; sourceTree = "<group>"; };
+		D9937DFF18889795009574AD /* jsonlite.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = jsonlite.l; sourceTree = SOURCE_ROOT; };
+		D9937E0018889795009574AD /* jsonlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsonlite.m; sourceTree = SOURCE_ROOT; };
+		D9937E0118889795009574AD /* jsonlite.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = jsonlite.y; sourceTree = SOURCE_ROOT; };
+		D9937E0218889795009574AD /* JSONLiteParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONLiteParser.h; sourceTree = SOURCE_ROOT; };
+		D9937E0318889795009574AD /* JSONLiteParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONLiteParser.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 		D9937DC2188896F2009574AD = {
 			isa = PBXGroup;
 			children = (
-				D9937DD0188896F2009574AD /* mJSON */,
-				D9937DE4188896F3009574AD /* mJSONTests */,
+				D9937DD0188896F2009574AD /* JSONLite */,
+				D9937DE4188896F3009574AD /* JSONLiteTests */,
 				D9937DCD188896F2009574AD /* Frameworks */,
 				D9937DCC188896F2009574AD /* Products */,
 			);
@@ -135,31 +135,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D9937DD0188896F2009574AD /* mJSON */ = {
+		D9937DD0188896F2009574AD /* JSONLite */ = {
 			isa = PBXGroup;
 			children = (
-				D9937DFF18889795009574AD /* mjson.l */,
-				D9937E0018889795009574AD /* mjson.m */,
-				D9937E0118889795009574AD /* mjson.y */,
-				D9937E0218889795009574AD /* mJSONParser.h */,
-				D9937E0318889795009574AD /* mJSONParser.m */,
+				D9937DFF18889795009574AD /* jsonlite.l */,
+				D9937E0018889795009574AD /* jsonlite.m */,
+				D9937E0118889795009574AD /* jsonlite.y */,
+				D9937E0218889795009574AD /* JSONLiteParser.h */,
+				D9937E0318889795009574AD /* JSONLiteParser.m */,
 			);
+			name = JSONLite;
 			path = mJSON;
 			sourceTree = "<group>";
 		};
-		D9937DE4188896F3009574AD /* mJSONTests */ = {
+		D9937DE4188896F3009574AD /* JSONLiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9937DEA188896F3009574AD /* mJSONTests.m */,
+				D9937DEA188896F3009574AD /* JSONLiteTests.m */,
 				D9937DE5188896F3009574AD /* Supporting Files */,
 			);
+			name = JSONLiteTests;
 			path = mJSONTests;
 			sourceTree = "<group>";
 		};
 		D9937DE5188896F3009574AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D9937DE6188896F3009574AD /* mJSONTests-Info.plist */,
+				D9937DE6188896F3009574AD /* JSONLiteTests-Info.plist */,
 				D9937DE7188896F3009574AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -214,7 +216,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Niels Gabel";
 			};
-			buildConfigurationList = D9937DC6188896F2009574AD /* Build configuration list for PBXProject "mJSON" */;
+			buildConfigurationList = D9937DC6188896F2009574AD /* Build configuration list for PBXProject "JSONLite" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,10 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9937E0718889795009574AD /* mJSONParser.m in Sources */,
-				D9937E0618889795009574AD /* mjson.y in Sources */,
-				D9937E0418889795009574AD /* mjson.l in Sources */,
-				D9937E0518889795009574AD /* mjson.m in Sources */,
+				D9937E0718889795009574AD /* JSONLiteParser.m in Sources */,
+				D9937E0618889795009574AD /* jsonlite.y in Sources */,
+				D9937E0418889795009574AD /* jsonlite.l in Sources */,
+				D9937E0518889795009574AD /* jsonlite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9937DEB188896F3009574AD /* mJSONTests.m in Sources */,
+				D9937DEB188896F3009574AD /* JSONLiteTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				DSTROOT = /tmp/mJSON.dst;
+				DSTROOT = /tmp/JSONLite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				LEX = /usr/local/opt/flex/bin/flex;
 				OTHER_LDFLAGS = "-ObjC";
@@ -373,7 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				DSTROOT = /tmp/mJSON.dst;
+				DSTROOT = /tmp/JSONLite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				LEX = /usr/local/opt/flex/bin/flex;
 				OTHER_LDFLAGS = "-ObjC";
@@ -393,12 +395,11 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mJSON/mJSON-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "mJSONTests/mJSONTests-Info.plist";
+				INFOPLIST_FILE = "JSONLiteTests/JSONLiteTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -414,8 +415,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mJSON/mJSON-Prefix.pch";
-				INFOPLIST_FILE = "mJSONTests/mJSONTests-Info.plist";
+				INFOPLIST_FILE = "JSONLiteTests/JSONLiteTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -424,7 +424,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D9937DC6188896F2009574AD /* Build configuration list for PBXProject "mJSON" */ = {
+		D9937DC6188896F2009574AD /* Build configuration list for PBXProject "JSONLite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9937DEC188896F3009574AD /* Debug */,

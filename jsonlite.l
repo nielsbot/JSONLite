@@ -32,7 +32,7 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 \/\/.*$					/* eat line comment */
 
 {INTEGER}				{
-							yylval->number = @( strtoll( yytext, &(char*){0}, 10 ) ); return INTEGER ;
+							yylval->number = @( strtoll( yytext, &(char*){0}, 0 ) ); return INTEGER ;
 						}
 {REAL}					{
 							yylval->number = @( strtod( yytext, &(char*){0} )); return REAL ;

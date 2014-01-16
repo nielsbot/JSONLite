@@ -1,6 +1,6 @@
 //
-//  mJSONTests.m
-//  mJSONTests
+//  JSONLiteTests.m
+//  JSONLiteTests
 //
 //  Created by Niels Gabel on 1/16/14.
 //  Copyright (c) 2014 Niels Gabel. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface mJSONTests : XCTestCase
+@interface JSONLiteTests : XCTestCase
 
 @end
 
-@implementation mJSONTests
+@implementation JSONLiteTests
 
 - (void)setUp
 {

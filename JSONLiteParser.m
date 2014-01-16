@@ -1,16 +1,16 @@
 //
-//  mJSON.m
-//  mJSON
+//  JSONLite.m
+//  JSONLite
 //
 //  Created by Niels Gabel on 10/17/13.
 //
 //
 
-#import "mJSONParser.h"
+#import "JSONLiteParser.h"
 #import "y.tab.h"
 #import "lex-scanner.h"
 
-@implementation mJSONParser
+@implementation JSONLiteParser
 
 +(id)objectFromData:(NSData*)data error:(NSError**)error ;
 {
