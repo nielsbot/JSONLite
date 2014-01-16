@@ -8,15 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		D9937DCF188896F2009574AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCE188896F2009574AD /* Foundation.framework */; };
-		D9937DD4188896F3009574AD /* mJSON.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9937DD3188896F3009574AD /* mJSON.h */; };
-		D9937DD6188896F3009574AD /* mJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937DD5188896F3009574AD /* mJSON.m */; };
 		D9937DDD188896F3009574AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DDC188896F3009574AD /* XCTest.framework */; };
 		D9937DDE188896F3009574AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCE188896F2009574AD /* Foundation.framework */; };
 		D9937DE0188896F3009574AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DDF188896F3009574AD /* UIKit.framework */; };
 		D9937DE3188896F3009574AD /* libmJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9937DCB188896F2009574AD /* libmJSON.a */; };
 		D9937DE9188896F3009574AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9937DE7188896F3009574AD /* InfoPlist.strings */; };
 		D9937DEB188896F3009574AD /* mJSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937DEA188896F3009574AD /* mJSONTests.m */; };
+		D9937E0418889795009574AD /* mjson.l in Sources */ = {isa = PBXBuildFile; fileRef = D9937DFF18889795009574AD /* mjson.l */; };
+		D9937E0518889795009574AD /* mjson.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0018889795009574AD /* mjson.m */; };
+		D9937E0618889795009574AD /* mjson.y in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0118889795009574AD /* mjson.y */; };
+		D9937E0718889795009574AD /* mJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9937E0318889795009574AD /* mJSONParser.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		D9937E0918889838009574AD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.lex;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/lex-scanner.m",
+				"$(DERIVED_FILE_DIR)/lex-scanner.h",
+			);
+			script = "# $(LEX)\n# $(LEX)\n$LEX --header-file=$DERIVED_FILE_DIR/lex-scanner.h --outfile=$DERIVED_FILE_DIR/lex-scanner.m $INPUT_FILE_PATH";
+		};
+		D9937E0A1888983B009574AD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.yacc;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/y.tab.m",
+				"$(DERIVED_FILE_DIR)/y.tab.h",
+			);
+			script = "# $(YACC)\n$YACC \"--output=$DERIVED_FILE_DIR/y.tab.m\" \"--defines=$DERIVED_FILE_DIR/y.tab.h\" \"$INPUT_FILE_PATH\"";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		D9937DE1188896F3009574AD /* PBXContainerItemProxy */ = {
@@ -35,7 +62,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				D9937DD4188896F3009574AD /* mJSON.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,15 +70,17 @@
 /* Begin PBXFileReference section */
 		D9937DCB188896F2009574AD /* libmJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9937DCE188896F2009574AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D9937DD2188896F3009574AD /* mJSON-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mJSON-Prefix.pch"; sourceTree = "<group>"; };
-		D9937DD3188896F3009574AD /* mJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mJSON.h; sourceTree = "<group>"; };
-		D9937DD5188896F3009574AD /* mJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mJSON.m; sourceTree = "<group>"; };
 		D9937DDB188896F3009574AD /* mJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9937DDC188896F3009574AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D9937DDF188896F3009574AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D9937DE6188896F3009574AD /* mJSONTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mJSONTests-Info.plist"; sourceTree = "<group>"; };
 		D9937DE8188896F3009574AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D9937DEA188896F3009574AD /* mJSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mJSONTests.m; sourceTree = "<group>"; };
+		D9937DFF18889795009574AD /* mjson.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = mjson.l; sourceTree = SOURCE_ROOT; };
+		D9937E0018889795009574AD /* mjson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mjson.m; sourceTree = SOURCE_ROOT; };
+		D9937E0118889795009574AD /* mjson.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = mjson.y; sourceTree = SOURCE_ROOT; };
+		D9937E0218889795009574AD /* mJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mJSONParser.h; sourceTree = SOURCE_ROOT; };
+		D9937E0318889795009574AD /* mJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mJSONParser.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,19 +138,13 @@
 		D9937DD0188896F2009574AD /* mJSON */ = {
 			isa = PBXGroup;
 			children = (
-				D9937DD3188896F3009574AD /* mJSON.h */,
-				D9937DD5188896F3009574AD /* mJSON.m */,
-				D9937DD1188896F2009574AD /* Supporting Files */,
+				D9937DFF18889795009574AD /* mjson.l */,
+				D9937E0018889795009574AD /* mjson.m */,
+				D9937E0118889795009574AD /* mjson.y */,
+				D9937E0218889795009574AD /* mJSONParser.h */,
+				D9937E0318889795009574AD /* mJSONParser.m */,
 			);
 			path = mJSON;
-			sourceTree = "<group>";
-		};
-		D9937DD1188896F2009574AD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9937DD2188896F3009574AD /* mJSON-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D9937DE4188896F3009574AD /* mJSONTests */ = {
@@ -155,6 +177,8 @@
 				D9937DC9188896F2009574AD /* CopyFiles */,
 			);
 			buildRules = (
+				D9937E0A1888983B009574AD /* PBXBuildRule */,
+				D9937E0918889838009574AD /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -224,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9937DD6188896F3009574AD /* mJSON.m in Sources */,
+				D9937E0718889795009574AD /* mJSONParser.m in Sources */,
+				D9937E0618889795009574AD /* mjson.y in Sources */,
+				D9937E0418889795009574AD /* mjson.l in Sources */,
+				D9937E0518889795009574AD /* mjson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,24 +358,28 @@
 		D9937DEF188896F3009574AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/mJSON.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mJSON/mJSON-Prefix.pch";
+				LEX = /usr/local/opt/flex/bin/flex;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				YACC = /usr/local/opt/bison/bin/bison;
 			};
 			name = Debug;
 		};
 		D9937DF0188896F3009574AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/mJSON.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mJSON/mJSON-Prefix.pch";
+				LEX = /usr/local/opt/flex/bin/flex;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				YACC = /usr/local/opt/bison/bin/bison;
 			};
 			name = Release;
 		};
@@ -409,6 +440,7 @@
 				D9937DF0188896F3009574AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9937DF1188896F3009574AD /* Build configuration list for PBXNativeTarget "mJSONTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +449,7 @@
 				D9937DF3188896F3009574AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
