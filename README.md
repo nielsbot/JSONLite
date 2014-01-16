@@ -22,9 +22,10 @@ Standard JSON:
 "JSONLite":
 
     {
+        // a comment can go here
         arrayProp: [ 
             "string0" 1.0 
-            "string1" 
+            "string1" // or here...
         ]
         objectProp: { key0:"string0" }
     }
