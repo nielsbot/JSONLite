@@ -1,5 +1,5 @@
 
-//  mjson.m
+//  jsonlite.m
 //  fake-prefs
 //
 //  Created by Niels Gabel on 10/17/13.
