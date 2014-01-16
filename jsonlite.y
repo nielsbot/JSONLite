@@ -76,9 +76,17 @@ object:	'{' key_value_list '}'
 		{
 			$$ = $2 ;
 		}
+		| '{' key_value_list ',' '}'
+		{
+			$$ = $2 ;
+		}
 ;
 
 array:	'[' value_list ']'
+		{
+			$$ = $2 ;
+		}
+		| '[' value_list ',' ']'
 		{
 			$$ = $2 ;
 		}
