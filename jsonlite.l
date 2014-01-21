@@ -22,7 +22,11 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 							BEGIN(expect_string);
 							yylval->string = [ [ NSMutableString alloc ] init ] ;
 						}
-<expect_string>\\.			CFStringAppendCString( (CFMutableStringRef)yylval->string, yytext, kCFStringEncodingUTF8 ) ;
+<expect_string>\\u[0-9a-fA-F]{4}	CFStringAppendCharacters(  (CFMutableStringRef)yylval->string, (unichar[1]){ strtol( &yytext[2], NULL, 16 ) }, 1 ) ;
+<expect_string>\\n				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\n", kCFStringEncodingUTF8 ) ;
+<expect_string>\\r				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\r", kCFStringEncodingUTF8 ) ;
+<expect_string>\\\"				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\"", kCFStringEncodingUTF8 ) ;
+<expect_string>\\\\				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\\", kCFStringEncodingUTF8 ) ;
 <expect_string>\"			{
 							BEGIN(INITIAL);
 							return STRING ;
@@ -51,5 +55,6 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 							return STRING ;
 						}
 
+\\n						return "\n" ;
 [[:space:]]					/* eat whitespace */
 .						return yytext[0];

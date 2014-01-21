@@ -44,10 +44,10 @@
 //			yyset_debug( 1, scanner) ;
 			
 			BOOL success = 0 == yyparse( scanner, & result, error ) ;
-			if ( success && result )
-			{
-				printf( "%s\n", [ [ result description ] UTF8String ] ) ;
-			}
+//			if ( success && result )
+//			{
+//				printf( "%s\n", [ [ result description ] UTF8String ] ) ;
+//			}
 		}
 		
 		if ( scanner )

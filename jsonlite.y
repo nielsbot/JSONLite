@@ -70,23 +70,19 @@ key_value_list:		/* empty */
 				{
 					[ $1 setObject:$5 forKey:$3 ] ;
 				}
+				| key_value_list ','
+				{
+					$$ = $1 ;
+				}
 ;
 
 object:	'{' key_value_list '}'
 		{
 			$$ = $2 ;
 		}
-		| '{' key_value_list ',' '}'
-		{
-			$$ = $2 ;
-		}
 ;
 
 array:	'[' value_list ']'
-		{
-			$$ = $2 ;
-		}
-		| '[' value_list ',' ']'
 		{
 			$$ = $2 ;
 		}
@@ -98,6 +94,10 @@ value_list:		/* empty */
 			{ [ $$ addObject:$2 ] ; }
 			| value_list ',' value
 			{ [ $$ addObject:$3 ] ; }
+			| value_list ','
+			{
+				$$ = $1 ;
+			}
 ;
 
 string:		STRING
