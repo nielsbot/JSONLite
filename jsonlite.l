@@ -54,7 +54,5 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 							yylval->string = [ NSString stringWithCString:yytext encoding:NSUTF8StringEncoding ] ;
 							return STRING ;
 						}
-
-\\n						return "\n" ;
 [[:space:]]					/* eat whitespace */
 .						return yytext[0];
