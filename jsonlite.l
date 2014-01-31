@@ -22,7 +22,7 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 							BEGIN(expect_string);
 							yylval->mutableData = [ NSMutableData data ] ;
 						}
-<expect_string>\\u[0-9a-fA-F]{4}	[ yylval->mutableData appendBytes:&(uint16_t){ strtol( &yytext[2], NULL, 16 ) } length:2 ] ;
+<expect_string>\\u[0-9a-fA-F]{4}	[ yylval->mutableData appendBytes:&(uint16_t){ strtol( &yytext[2], NULL, 16 ) } length:sizeof( uint16_t ) ] ;
 <expect_string>\\n				[ yylval->mutableData appendBytes:&"\n" length:1 ] ;
 <expect_string>\\r				[ yylval->mutableData appendBytes:&"\r" length:1 ] ;
 <expect_string>\\\"				[ yylval->mutableData appendBytes:&"\"" length:1 ] ;
