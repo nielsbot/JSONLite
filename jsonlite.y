@@ -39,6 +39,7 @@
 %type <mutableDictionary> key_value_list
 
 %union {
+	NSMutableData *		mutableData ;
 	NSObject *			object ;
 	NSString *			string ;
 	NSNumber *			number ;

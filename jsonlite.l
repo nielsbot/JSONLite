@@ -20,18 +20,21 @@ STRING				[a-zA-Z][a-zA-Z0-9_-]*
 
 \"						{
 							BEGIN(expect_string);
-							yylval->string = [ [ NSMutableString alloc ] init ] ;
+							yylval->mutableData = [ NSMutableData data ] ;
 						}
-<expect_string>\\u[0-9a-fA-F]{4}	CFStringAppendCharacters(  (CFMutableStringRef)yylval->string, (unichar[1]){ strtol( &yytext[2], NULL, 16 ) }, 1 ) ;
-<expect_string>\\n				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\n", kCFStringEncodingUTF8 ) ;
-<expect_string>\\r				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\r", kCFStringEncodingUTF8 ) ;
-<expect_string>\\\"				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\"", kCFStringEncodingUTF8 ) ;
-<expect_string>\\\\				CFStringAppendCString( (CFMutableStringRef)yylval->string, "\\", kCFStringEncodingUTF8 ) ;
+<expect_string>\\u[0-9a-fA-F]{4}	[ yylval->mutableData appendBytes:&(uint16_t){ strtol( &yytext[2], NULL, 16 ) } length:2 ] ;
+<expect_string>\\n				[ yylval->mutableData appendBytes:&"\n" length:1 ] ;
+<expect_string>\\r				[ yylval->mutableData appendBytes:&"\r" length:1 ] ;
+<expect_string>\\\"				[ yylval->mutableData appendBytes:&"\"" length:1 ] ;
+<expect_string>\\\\				[ yylval->mutableData appendBytes:&"\\" length:1 ] ;
 <expect_string>\"			{
 							BEGIN(INITIAL);
+							NSMutableData * data = yylval->mutableData ;
+							yylval->string = [ [ NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding ] ;
+							[ yylval->string autorelease ] ;
 							return STRING ;
 						}
-<expect_string>.|\n			CFStringAppendCString( (CFMutableStringRef)yylval->string, yytext, kCFStringEncodingUTF8 ) ;
+<expect_string>.|\n			[ yylval->mutableData appendBytes:yytext length:1 ] ;
 
 \/\/.*$					/* eat line comment */
 
